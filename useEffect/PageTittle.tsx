@@ -9,7 +9,9 @@ export default function PageTittle() {
 
   return (
     <div>
-      <p>You clickedtimes</p>
+      <p>
+        By default, it runs both after the first render and after every update.{' '}
+      </p>
     </div>
   );
 }

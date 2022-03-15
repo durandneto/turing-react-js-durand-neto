@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
 
-function Counter() {
+export default function ComponentDidUpdate() {
   const [count, setCount] = useState(0);
 
-  // Similar to componentDidUpdate:
+  // Similar to componentDidMount and componentDidUpdate:
   useEffect(() => {
-    // Update the document title using the browser API
-    console.log(count);
+    // after de component load
+    // After count changed
+    // I can use Jquey here it is safe :)
+    // We can use setTimeout and promises here
+    console.log('useEffect', count);
   }, [count]);
 
   return (

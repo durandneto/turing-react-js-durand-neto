@@ -10,9 +10,12 @@ export default function IntersectionObserver() {
       let prevRatio = 0.0;
       entries.forEach((entry) => {
         if (entry.intersectionRatio > prevRatio) {
-          console.log('up', entry.intersectionRatio);
-          if (entry.intersectionRatio < 0.9) {
-            text.innerHTML = "I'm leaving";
+          if (entry.intersectionRatio < 0.6) {
+            text.innerHTML = 'Comment below!';
+          } else if (entry.intersectionRatio < 0.8) {
+            text.innerHTML = 'Thumbs UP!';
+          } else if (entry.intersectionRatio < 1) {
+            text.innerHTML = 'Subscribe!';
           } else {
             text.innerHTML = 'Welcome to Turing|Observers';
           }
@@ -49,16 +52,20 @@ export default function IntersectionObserver() {
 
     let options = {
       root: null,
-      rootMargin: '0px',
+      rootMargin: '100px',
       threshold: buildThresholdList(),
     };
 
     let observer = new window.IntersectionObserver(handleIntersect, options);
     observer.observe(boxElement);
+
+    return () => observer.disconnect();
   });
 
   return (
     <div id="wrapper">
+      <h1>Welcome to Learning with Turing</h1>
+      <h2>ReactJS useEffect</h2>
       <div id="box">
         <div className="vertical" id="vertical">
           Welcome to <strong>The Box!</strong>

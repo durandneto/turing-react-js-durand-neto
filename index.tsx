@@ -7,8 +7,6 @@ import IntersectionObserver from './useEffect/IntersectionObserver';
 const App = () => {
   return (
     <div>
-      <h1>Welcome to Learning with Turing</h1>
-      <h2>ReactJS useEffect</h2>
       <IntersectionObserver />
     </div>
   );

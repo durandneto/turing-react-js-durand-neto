@@ -12,19 +12,21 @@ export default function IntersectionObserver() {
         if (entry.intersectionRatio > prevRatio) {
           if (entry.intersectionRatio < 0.6) {
             text.innerHTML = 'Comment below!';
+            entry.target.style.backgroundColor = 'red';
           } else if (entry.intersectionRatio < 0.8) {
             text.innerHTML = 'Thumbs UP!';
+            entry.target.style.backgroundColor = '#0e70c0';
+          } else if (entry.intersectionRatio < 0.9) {
+            text.innerHTML = 'Subscribe!';
+            entry.target.style.backgroundColor = 'green';
           } else if (entry.intersectionRatio < 1) {
             text.innerHTML = 'Subscribe!';
+            entry.target.style.backgroundColor = 'red';
           } else {
-            text.innerHTML = 'Welcome to Turing|Observers';
+            text.innerHTML = 'ReactHooks like a PRO!';
+            entry.target.style.backgroundColor = '#0e70c0';
           }
-          entry.target.style.backgroundColor = increasingColor.replace(
-            'ratio',
-            entry.intersectionRatio
-          );
         } else {
-          console.log('dows');
           entry.target.style.backgroundColor = decreasingColor.replace(
             'ratio',
             entry.intersectionRatio
@@ -52,7 +54,6 @@ export default function IntersectionObserver() {
 
     let options = {
       root: null,
-      rootMargin: '100px',
       threshold: buildThresholdList(),
     };
 

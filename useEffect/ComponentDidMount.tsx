@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
 
-export default function PageTittle() {
+export default function ComponentDidMount() {
   useEffect(() => {
     // after de component load
-    // I can use Jquey here :)
+    // After all renders
+    // I can use Jquey here it is safe :)
     // I can connect to webserver here
   });
 

@@ -33,3 +33,8 @@ p {
 #wrapper {
   padding: 1500px 0;
 }
+
+#textWrapper {
+  position: fixed;
+  top: 0;
+}

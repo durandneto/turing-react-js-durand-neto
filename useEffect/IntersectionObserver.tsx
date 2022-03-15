@@ -20,7 +20,7 @@ export default function IntersectionObserver() {
             text.innerHTML = 'Subscribe!';
             entry.target.style.backgroundColor = 'green';
           } else if (entry.intersectionRatio < 1) {
-            text.innerHTML = 'Subscribe!';
+            text.innerHTML = 'YES!';
             entry.target.style.backgroundColor = 'red';
           } else {
             text.innerHTML = 'ReactHooks like a PRO!';
@@ -64,8 +64,10 @@ export default function IntersectionObserver() {
 
   return (
     <div id="wrapper">
-      <h1>Welcome to Learning with Turing</h1>
-      <h2>ReactJS useEffect</h2>
+      <div id="textWrapper">
+        <h1>Welcome to Learning with Turing</h1>
+        <h2>ReactJS useEffect</h2>
+      </div>
       <div id="box">
         <div className="vertical" id="vertical">
           Welcome to <strong>The Box!</strong>

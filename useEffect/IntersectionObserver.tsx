@@ -46,7 +46,6 @@ export default function IntersectionObserver() {
       }
 
       thresholds.push(0);
-      console.log(thresholds);
       return thresholds;
     }
 
